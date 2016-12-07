@@ -7,7 +7,7 @@ test('visiting /', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.equal(currentURL(), '/');
+    assert.equal(currentURL(), '/rentals');
   });
 });
 
@@ -22,6 +22,13 @@ test('visiting /contact', function (assert) {
   visit('/contact');
   andThen(function() {
     assert.equal(currentURL(), '/contact');
+  });
+});
+
+test('visiting /rentals', function (assert) {
+  visit('/rentals');
+  andThen(function() {
+    assert.equal(currentURL(), '/rentals');
   });
 });
 
@@ -66,7 +73,6 @@ test('should show contents for a contact', function (assert) {
     assert.equal(find('.jumbo .right').is(':visible'), true);
     assert.equal(find('.jumbo .tomster').is(':visible'), true);
     assert.equal(find('p').is(':visible'), true);
-    assert.equal(find('br').is(':visible'), false);
     assert.equal(find('address').is(':visible'), true);
     assert.equal(find('a').is(':visible'), true);
     assert.equal(find('.button').is(':visible'), true);
