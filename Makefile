@@ -1,8 +1,8 @@
 V ?= @
-LOCALHOST := 'localhost'
+LOCALHOST := '127.0.0.1'
 PORT := '4200'
 VERSION := '0.0.1'
-LOCALSERVER := 'http://127.0.0.1:8000'
+LOCALSERVER := 'http://localhost:4200'
 ENV_DEVELOPMENT := 'development'
 ENV_PRODUCTION := 'production'
 ENV_TEST := 'test'
@@ -24,17 +24,19 @@ help:
 	$(V)echo "\n\n\t Manual Makefile to start of the project:\n\n make start - Start App Development Environment.\n make test  - Start App Test Environment.\n"
 
 clean:
+	$(V)clear
 	$(V)npm cache clean
 	$(V)bower cache clean
 	$(V)rm -rf ./dist
 	$(V)rm -rf ./tmp/*
+	$(V)clear
 
 test: clean
 	$(V)echo "\n\n\t Start $(ENV_TEST) Enviroment on $(LOCALSERVER)\n\n"
 	$(V)ember test
 
 start: clean
-	$(V)echo "\n\n\t Start $(ENV_DEVELOPMENT) Enviroment on $(LOCALSERVER)\n\n"
+	$(V)echo "\n\n\t  Start App $(ENV_DEVELOPMENT) Enviroment\n\n\t\t$(LOCALSERVER)\n\n"
 	$(V)ember server
 
 start_dev: clean
