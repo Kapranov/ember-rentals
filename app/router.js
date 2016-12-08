@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('about');
   this.route('contact');
   this.route('rentals');
+  this.route('page-not-found', { path: '/*wildcard' });
 });
 
 export default Router;
