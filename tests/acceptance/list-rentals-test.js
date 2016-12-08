@@ -1,5 +1,6 @@
 import { test } from 'qunit';
 import moduleForAcceptance from 'ember-rentals/tests/helpers/module-for-acceptance';
+import Ember from 'ember';
 
 let StubMapsService = Ember.Service.extend({
   getMapElement() {
