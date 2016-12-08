@@ -1,5 +1,9 @@
 <div class="jumbo show-listing">
-  <h2 class="title">{{model.title}}</h2>
+<h2 class="title">
+  {{#link-to "rentals"}}
+    {{model.title}}
+  {{/link-to}}
+</h2>
   <div class="right detail-section">
     <div class="detail owner">
       <strong>Owner:</strong> {{model.owner}}
