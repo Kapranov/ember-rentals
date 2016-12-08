@@ -1,6 +1,7 @@
 V ?= @
 LOCALHOST := 'localhost'
 PORT := '4200'
+VERSION := '0.0.1'
 LOCALSERVER := 'http://127.0.0.1:8000'
 ENV_DEVELOPMENT := 'development'
 ENV_PRODUCTION := 'production'
