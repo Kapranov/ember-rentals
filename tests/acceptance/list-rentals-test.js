@@ -1,7 +1,18 @@
 import { test } from 'qunit';
 import moduleForAcceptance from 'ember-rentals/tests/helpers/module-for-acceptance';
 
-moduleForAcceptance('Acceptance | list rentals');
+let StubMapsService = Ember.Service.extend({
+  getMapElement() {
+    return document.createElement('div');
+  }
+});
+
+moduleForAcceptance('Acceptance | list rentals', {
+  beforeEach() {
+    this.application.register('service:stubMaps', StubMapsService);
+    this.application.inject('component:location-map', 'maps', 'service:stubMaps');
+  }
+});
 
 test('visiting /rentals', function (assert) {
   visit('/rentals');
