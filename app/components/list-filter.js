@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['list-filter', 'message-card'],
+  classNames: ['list-filter', 'message-card-list'],
   value: '',
 
   init() {

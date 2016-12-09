@@ -17,3 +17,56 @@
     <h2>check you on the flip side</h2>
   </div>
 </div>
+
+<h2>Example #1</h2>
+{{input type="checkbox" checked=flipped}}
+
+{{#flippy-card flipped=flipped}}
+  <h2>Toggle my checkbox!</h2>
+{{else}}
+  <h2>check you on the flip side</h2>
+{{/flippy-card}}
+
+<br>
+
+<h2>Example #2</h2>
+<div class="growing">
+
+  {{#growing-card flipped=flipped }}
+    <div class="message-card-growing pink" {{action (action (mut flipped) true) }}>
+      <h2>Click me!</h2>
+    </div>
+  {{else}}
+    <div class="message-card-growing" {{action (action (mut flipped) false) }}>
+      <h2>check you on the flip side. </h2>
+    </div>
+  {{/growing-card}}
+
+</div>
+
+Stuff below the card.
+
+<br>
+
+<h2>Example #3</h2>
+<div class="multi">
+
+  {{#multi-card content=content as |c| }}
+    <div class="message-card-multi {{c.class}}">
+      <h2>{{c.message}}</h2>
+    </div>
+  {{/multi-card}}
+
+</div>
+
+<p>
+  <label>Next message </label>
+  {{input value=nextMessage}}
+</p>
+
+<p>
+  <label for="is-next-pink">Make it color pink?</label>
+  {{input type="checkbox" checked=nextCardPink id="is-next-pink"}}
+</p>
+
+<button  class="button" {{action "update"}}>Update</button>

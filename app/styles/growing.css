@@ -1,0 +1,37 @@
+.growing-card .liquid-container {
+  overflow: visible;
+  perspective: 600px;
+}
+
+.growing-card .liquid-child {
+  transform: rotateX(0) rotateY(0);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  overflow: visible;
+}
+
+
+.message-card-growing {
+  padding: 10px;
+  font-size:10pt;
+  border: 1px solid #ccc;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  background-color: #efe
+}
+
+.message-card-growing.pink {
+  font-size:10pt;
+  background-color: #fee;
+}
+
+.message-card-growing h2 {
+  margin: 0;
+  padding: 1.5em;
+  font-size:14pt;
+}
+
+.growing {
+  width: 300px;
+  margin: 10px;
+}
