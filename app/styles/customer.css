@@ -1,0 +1,120 @@
+.message-card {
+    border: 1px solid #ccc;
+    text-align: left;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+    /* background-color: #efe */
+}
+
+.message-card.pink {
+    background-color: #fee;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+}
+
+.message-card h2 {
+    margin: 0;
+    padding: 0.1em;
+}
+
+.panel-about {
+  float: right;
+  position: relative;
+}
+
+.panel-rentals {
+  float: right;
+  position: relative;
+}
+
+.panel-about .hover {
+  float: none;
+  z-index: 100;
+
+  -moz-transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
+
+  /* -- transition is the magic sauce for animation -- */
+  -o-transition: all .15s;
+  -moz-transition: all .15s ease-out;
+  -webkit-transition: all .15s ease-out;
+  transition: all .15s ease-out;
+}
+
+.panel-rentals .hover {
+  float: none;
+  z-index: 100;
+
+  -moz-transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
+
+  /* -- transition is the magic sauce for animation -- */
+  -o-transition: all .15s;
+  -moz-transition: all .15s ease-out;
+  -webkit-transition: all .15s ease-out;
+  transition: all .15s ease-out;
+}
+
+.panel-about .hover:hover {
+  z-index: 1000;
+
+  -o-transform: scale(1.0);
+  -moz-transform: scale(1.0);
+  -webkit-transform: scale(1.0);
+  transform: scale(1.0);
+}
+
+.panel-rentals .hover:hover {
+  z-index: 1000;
+
+  -o-transform: scale(1.0);
+  -moz-transform: scale(1.0);
+  -webkit-transform: scale(1.0);
+  transform: scale(1.0);
+}
+
+.wrap {
+  width:200px;
+  margin:auto;
+  z-index:1;
+}
+
+.msg {
+  color: whitesmoke;
+  text-align:center;
+  font-family: 'Bree Serif', Courier, monospaced;
+  font-size: 1.5em;
+  width: 100%;
+  position: absolute;
+  margin: 80px 0 0 2px;
+  pointer-events: none;
+}
+
+.sticker {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background: url(https://dl.dropbox.com/u/1143870/i/sticker.png) top center no-repeat;
+  animation: spin 10s linear infinite;
+  animation-play-state: paused;
+}
+
+.sticker:hover {
+  animation-play-state: running;
+  font-size: 0em;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.none-tomster {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 300px;
+    padding: 50px;
+}
+
