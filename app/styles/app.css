@@ -148,3 +148,48 @@
   -webkit-transform: scale(1.0);
   transform: scale(1.0);
 }
+
+.wrap {
+  width:200px;
+  margin:auto;
+  z-index:1;
+}
+
+.msg {
+  color: whitesmoke;
+  text-align:center;
+  font-family: 'Bree Serif', Courier, monospaced;
+  font-size: 1.5em;
+  width: 100%;
+  position: absolute;
+  margin: 80px 0 0 2px;
+  pointer-events: none;
+}
+
+.sticker {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  background: url(https://dl.dropbox.com/u/1143870/i/sticker.png) top center no-repeat;
+  animation: spin 10s linear infinite;
+  animation-play-state: paused;
+}
+
+.sticker:hover {
+  animation-play-state: running;
+  font-size: 0em;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.none-tomster {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 300px;
+    padding: 50px;
+}
