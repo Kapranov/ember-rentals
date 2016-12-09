@@ -2,9 +2,8 @@
 
 {{#list-filter
   filter=(action 'filterByCity')
-  flipped=flipped
   as |rentals|}}
-  <ul class="results message-card pink">
+  <ul class="results">
     {{#each rentals as |rentalUnit|}}
       <li>{{rental-listing rental=rentalUnit}}</li>
     {{/each}}

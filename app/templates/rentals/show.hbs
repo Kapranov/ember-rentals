@@ -1,23 +1,25 @@
-<div class="jumbo show-listing">
-<h2 class="title">
-  {{#link-to "rentals"}}
-    {{model.title}}
-  {{/link-to}}
-</h2>
-  <div class="right detail-section">
-    <div class="detail owner">
-      <strong>Owner:</strong> {{model.owner}}
+<div class="message-card pink">
+  <div class="jumbo show-listing">
+    <h2 class="title">
+      {{#link-to "rentals"}}
+        {{model.title}}
+      {{/link-to}}
+    </h2>
+    <div class="right detail-section">
+      <div class="detail owner">
+        <strong>Owner:</strong> {{model.owner}}
+      </div>
+      <div class="detail">
+        <strong>Type:</strong> {{rental-property-type model.type}} - {{model.type}}
+      </div>
+      <div class="detail">
+        <strong>Location:</strong> {{model.city}}
+      </div>
+      <div class="detail">
+        <strong>Number of bedrooms:</strong> {{model.bedrooms}}
+      </div>
+      <p class="description">{{model.description}}</p>
     </div>
-    <div class="detail">
-      <strong>Type:</strong> {{rental-property-type model.type}} - {{model.type}}
-    </div>
-    <div class="detail">
-      <strong>Location:</strong> {{model.city}}
-    </div>
-    <div class="detail">
-      <strong>Number of bedrooms:</strong> {{model.bedrooms}}
-    </div>
-    <p class="description">{{model.description}}</p>
+    <img src="{{model.image}}" class="rental-pic">
   </div>
-  <img src="{{model.image}}" class="rental-pic">
 </div>
